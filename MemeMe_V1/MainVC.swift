@@ -40,6 +40,7 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
 
     
     var isKeyboardVisible = false
+
     
     
     // Use of undeclared type 'MemeImage'
@@ -181,6 +182,9 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
                     self.dismiss( animated: true, completion: nil )
                 }
             self.present(socialController, animated: true, completion: nil)
+            
+            return memedImage
+            
             }
         }
         
