@@ -35,7 +35,7 @@
                                             <action selector="getImageFromAlbum:" destination="BYZ-38-t0r" id="aSd-ko-p5e"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Camera" id="jfY-m4-uGK">
+                                    <barButtonItem systemItem="camera" id="jfY-m4-uGK">
                                         <connections>
                                             <action selector="getImageFromCamera:" destination="BYZ-38-t0r" id="2DP-TD-4tv"/>
                                         </connections>
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Share" id="8i4-TY-Sq4">
+                                    <barButtonItem systemItem="action" id="8i4-TY-Sq4">
                                         <connections>
                                             <action selector="share:" destination="BYZ-38-t0r" id="LYJ-XS-VPf"/>
                                         </connections>
@@ -77,7 +77,8 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancel"/>
                                             <connections>
-                                                <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchCancel" id="BLo-uF-juC"/>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMd-XL-3Gl"/>
+                                                <action selector="imagePickCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zi4-7b-EQf"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
