@@ -61,9 +61,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-xQ-9xc">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-xQ-9xc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="8i4-TY-Sq4">
                                         <connections>
@@ -94,10 +93,13 @@
                             <constraint firstItem="zgq-yM-pBM" firstAttribute="centerX" secondItem="KOg-0m-YRr" secondAttribute="centerX" id="NgS-5u-pMe"/>
                             <constraint firstItem="zgq-yM-pBM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OjH-P4-qXW"/>
                             <constraint firstAttribute="bottom" secondItem="HoD-2P-MTa" secondAttribute="bottom" constant="61" id="UH5-RN-RBD"/>
+                            <constraint firstAttribute="trailing" secondItem="ggf-xQ-9xc" secondAttribute="trailing" id="YIi-4N-B2p"/>
                             <constraint firstItem="KOg-0m-YRr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bg9-CO-5rY"/>
                             <constraint firstItem="zgq-yM-pBM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dSG-8A-RQL"/>
                             <constraint firstItem="KOg-0m-YRr" firstAttribute="leading" secondItem="v0S-Xm-z2t" secondAttribute="leading" id="dnv-h0-zVe"/>
+                            <constraint firstItem="ggf-xQ-9xc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jI6-Aq-4Dn"/>
                             <constraint firstItem="HoD-2P-MTa" firstAttribute="centerX" secondItem="KOg-0m-YRr" secondAttribute="centerX" id="nMF-uY-Vsv"/>
+                            <constraint firstItem="ggf-xQ-9xc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaq-w1-W1n"/>
                             <constraint firstItem="v0S-Xm-z2t" firstAttribute="top" secondItem="HoD-2P-MTa" secondAttribute="bottom" constant="17" id="vIQ-qS-iCH"/>
                             <constraint firstItem="HoD-2P-MTa" firstAttribute="centerX" secondItem="v0S-Xm-z2t" secondAttribute="centerX" id="yE8-cX-nbR"/>
                             <constraint firstItem="KOg-0m-YRr" firstAttribute="bottom" secondItem="v0S-Xm-z2t" secondAttribute="top" id="zQJ-gh-nIf"/>
