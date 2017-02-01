@@ -188,9 +188,18 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         present(socialController, animated: true, completion: nil)
     }
     
+    func hideUnHideToolBars(hide: Bool) {
+        
+        topBar.isHidden = hide
+        bottomBar.isHidden =hide
+        
+    }
+    
     func generateMemedImage() -> UIImage {
         
-        shareBtn.isEnabled = false
+        //Hide the toolbars
+        hideUnHideToolBars(hide: true)
+        
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -198,7 +207,9 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        shareBtn.isEnabled = true
+        //unhide the toolbars
+        hideUnHideToolBars(hide: false)
+        
         return memedImage
         
     }

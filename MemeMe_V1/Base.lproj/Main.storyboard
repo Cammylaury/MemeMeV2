@@ -44,9 +44,9 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HoD-2P-MTa">
-                                <rect key="frame" x="16" y="462" width="343" height="144"/>
+                                <rect key="frame" x="16" y="561" width="343" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="p1o-uT-D8u"/>
+                                    <constraint firstAttribute="height" constant="45" id="ssr-bG-4W1"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
