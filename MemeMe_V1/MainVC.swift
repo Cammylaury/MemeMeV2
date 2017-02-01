@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  MemeMe_V1
 //
 //  Created by Cameron Laury on 1/19/17.
@@ -31,8 +31,8 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     let bottomTextDefault = "BOTTOM TEXT"
     let noText = ""
     
-    let topTextDelegate = TopTextDelegate()
-    let bottomTextDelegate = BottomTextDelegate()
+    let topTextDelegate = textDelegate()
+    let bottomTextDelegate = textDelegate()
     
     
     
@@ -61,15 +61,10 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        cameraBtn.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.subscribeToKeyboardNotifications()
+        cameraBtn.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 
     }
     
@@ -90,13 +85,9 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     func keyboardWillShow(_ notification:Notification) {
         
         
-        if bottomTextField.isEditing {
-            subscribeToKeyboardNotifications()
-            view.frame.origin.y -= getKeyboardHeight(notification)
+        if bottomTextField.isFirstResponder {
+            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
         }
-        
-            self.unsubscribeFromKeyboardNotifications()
-
     
     }
     
@@ -107,13 +98,14 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     }
     
     func subscribeToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil )
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         
-        NotificationCenter.default.addObserver( self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil )
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver( self, name: .UIKeyboardWillShow, object: nil )
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
@@ -185,20 +177,17 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         socialController.completionWithItemsHandler = {
             
             
-            UIActivityType, completion, items, error in
+            (UIActivityType, completed, returnedItems, activityError) in
             
-            if completion {
-                
-                self.generateMemedImage()
-                } else {
-                    self.dismiss( animated: true, completion: nil )
-                }
-            self.present(socialController, animated: true, completion: nil)
+            if completed {
             
-            self.saveMemes()
+            self.saveMeme(memedImage)
+                self.dismiss(animated: true, completion: nil)
             }
         }
-        
+        present(socialController, animated: true, completion: nil)
+    }
+    
     func generateMemedImage() -> UIImage {
         
         shareBtn.isEnabled = false
@@ -213,8 +202,8 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         return memedImage
         
     }
-        func saveMemes() {
-            _ = MemeImage.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: meme.memedImage)
+    func saveMeme(_ memedImage: UIImage) {
+            _ = MemeImage.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
 
         }
     

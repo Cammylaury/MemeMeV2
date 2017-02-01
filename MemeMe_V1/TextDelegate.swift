@@ -1,5 +1,5 @@
 //
-//  BottomTextDelegate.swift
+//  TextDelegate.swift
 //  MemeMe_V1
 //
 //  Created by Cameron Laury on 1/21/17.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class BottomTextDelegate: NSObject, UITextFieldDelegate {
+class textDelegate: NSObject, UITextFieldDelegate {
+    
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         return
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         

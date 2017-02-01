@@ -16,8 +16,7 @@
 		2638AB8C1E30B5B00072CB20 /* MemeMe_V1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638AB8B1E30B5B00072CB20 /* MemeMe_V1Tests.swift */; };
 		2638AB971E30B5B00072CB20 /* MemeMe_V1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638AB961E30B5B00072CB20 /* MemeMe_V1UITests.swift */; };
 		2638ABAA1E3302190072CB20 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABA91E3302190072CB20 /* Meme.swift */; };
-		2638ABAC1E33B4BD0072CB20 /* TopTextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABAB1E33B4BD0072CB20 /* TopTextDelegate.swift */; };
-		2638ABAE1E33B5FB0072CB20 /* BottomTextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABAD1E33B5FB0072CB20 /* BottomTextDelegate.swift */; };
+		2638ABAC1E33B4BD0072CB20 /* TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABAB1E33B4BD0072CB20 /* TextDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +52,7 @@
 		2638AB961E30B5B00072CB20 /* MemeMe_V1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_V1UITests.swift; sourceTree = "<group>"; };
 		2638AB981E30B5B00072CB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2638ABA91E3302190072CB20 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		2638ABAB1E33B4BD0072CB20 /* TopTextDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTextDelegate.swift; sourceTree = "<group>"; };
-		2638ABAD1E33B5FB0072CB20 /* BottomTextDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomTextDelegate.swift; sourceTree = "<group>"; };
+		2638ABAB1E33B4BD0072CB20 /* TextDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +152,8 @@
 		2638ABA81E3301AF0072CB20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2638ABAB1E33B4BD0072CB20 /* TopTextDelegate.swift */,
+				2638ABAB1E33B4BD0072CB20 /* TextDelegate.swift */,
 				2638ABA91E3302190072CB20 /* Meme.swift */,
-				2638ABAD1E33B5FB0072CB20 /* BottomTextDelegate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -298,8 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2638ABAE1E33B5FB0072CB20 /* BottomTextDelegate.swift in Sources */,
-				2638ABAC1E33B4BD0072CB20 /* TopTextDelegate.swift in Sources */,
+				2638ABAC1E33B4BD0072CB20 /* TextDelegate.swift in Sources */,
 				2638AB761E30B5B00072CB20 /* MainVC.swift in Sources */,
 				2638ABAA1E3302190072CB20 /* Meme.swift in Sources */,
 				2638AB741E30B5B00072CB20 /* AppDelegate.swift in Sources */,
