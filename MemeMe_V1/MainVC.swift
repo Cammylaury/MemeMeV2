@@ -191,7 +191,7 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     func hideUnHideToolBars(hide: Bool) {
         
         topBar.isHidden = hide
-        bottomBar.isHidden =hide
+        bottomBar.isHidden = hide
         
     }
     
