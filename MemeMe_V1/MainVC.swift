@@ -34,7 +34,9 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
     let topTextDelegate = textDelegate()
     let bottomTextDelegate = textDelegate()
     
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
     
