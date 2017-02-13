@@ -36,7 +36,9 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
     let topTextDelegate = textDelegate()
     let bottomTextDelegate = textDelegate()
     
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
     
