@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class memeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+    
+    // MainVC!
 
     // Top of the storyboard
     @IBOutlet weak var topBar: UIToolbar!
@@ -181,7 +183,7 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
             
             if completed {
             
-            self.saveMeme(memedImage)
+            self.save(memedImage)
                 self.dismiss(animated: true, completion: nil)
             }
         }
@@ -213,11 +215,16 @@ class MainVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCon
         return memedImage
         
     }
-    func saveMeme(_ memedImage: UIImage) {
-            _ = MemeImage.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+    func save(_ memedImage: UIImage) {
+            let meme = MemeImage.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+        
+        // Adding to the array of memes!
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
 
         }
-    
 
     }
 
