@@ -14,6 +14,8 @@ extension UIViewController {
         // Grab MemeDetailVC from Storyboard.
         let memeDetailViewController = storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
+        memeDetailViewController.meme = [meme]
+        
         // Present the view controller using navigation.
         navigationController!.pushViewController(memeDetailViewController, animated: true)
     }
