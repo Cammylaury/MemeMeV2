@@ -10,10 +10,40 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    var meme = [MemeImage]()
+    var meme = MemeImage?.self
+    
+    @IBOutlet weak var sentMemesBtn: UIBarButtonItem!
+    @IBOutlet weak var editBtn: UIBarButtonItem!
+    @IBOutlet weak var sentMemeView: UIImageView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        displayMeme(meme)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    func displayMeme(_ meme: MemeImage) {
+        
+        sentMemeView.image = MemeImage
+        
+    }
+    
+    @IBAction func launchMemeEditorViewController(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    
+    }
+    
+    //unwinding to the view before (the collectionView, or the tableView)
+    
+    @IBAction func unwindVC(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

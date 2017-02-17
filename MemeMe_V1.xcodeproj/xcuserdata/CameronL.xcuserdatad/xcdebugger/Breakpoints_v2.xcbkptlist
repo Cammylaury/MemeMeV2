@@ -345,12 +345,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe_V1/SentMemesTableViewController.swift"
-            timestampString = "508776352.532691"
+            timestampString = "508791452.167424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "delete(_:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "deleteMemesInTableViewCell(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/SentMemesCollectionViewController.swift"
+            timestampString = "508821317.980467"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "flowLayoutSettings()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/MemeDetailViewController.swift"
+            timestampString = "508960018.591333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "launchMemeEditorViewController(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

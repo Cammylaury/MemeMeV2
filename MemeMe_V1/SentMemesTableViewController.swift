@@ -20,6 +20,10 @@ class SentMemesTableViewController: UITableViewController {
         return appDelegate.memes
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +74,15 @@ class SentMemesTableViewController: UITableViewController {
     func deleteMemesInTableViewCell(_ index: Int) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.remove(at: index)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            tableView.beginUpdates()
+            deleteMemesInTableViewCell(indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
+            tableView.endUpdates()
+        }
     }
 }
 

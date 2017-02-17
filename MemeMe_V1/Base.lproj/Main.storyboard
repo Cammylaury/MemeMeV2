@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sent Memes Collection View-->
+        <!--Sent Memes-->
         <scene sceneID="Sqc-bN-G9c">
             <objects>
-                <collectionViewController id="XAs-s5-MBD" customClass="SentMemesCollectionView" sceneMemberID="viewController">
+                <collectionViewController id="XAs-s5-MBD" customClass="SentMemesCollectionViewController" customModule="MemeMe_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tsE-Xg-Fwz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,8 @@
                                     <constraint firstAttribute="bottom" secondItem="jeQ-qm-V3L" secondAttribute="bottom" id="fCL-n5-MzP"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="memedImageView" destination="jeQ-qm-V3L" id="BDG-c6-w0c"/>
+                                    <outlet property="memeCellImageView" destination="jeQ-qm-V3L" id="ejp-Dt-AOw"/>
+                                    <segue destination="T06-Ej-cEP" kind="presentation" id="B0v-rl-1ey"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -53,13 +54,16 @@
                             <outlet property="delegate" destination="XAs-s5-MBD" id="0gk-uj-agt"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="7dK-8L-vaS">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="7dK-8L-vaS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="azG-5D-cN6">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="9ln-ch-Pcg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="WMe-tG-xtt" id="rVZ-Dj-e8X"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oe3-ad-Hjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="-74" y="125"/>
         </scene>
-        <!--Sent Memes Table View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="6Bo-0x-Nn3">
             <objects>
                 <tableViewController id="TNS-8s-kk7" customClass="SentMemesTableViewController" customModule="MemeMe_V1" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,6 +244,7 @@
                                 <connections>
                                     <outlet property="tableViewImage" destination="3yk-P3-Ipd" id="bHZ-Eb-t8I"/>
                                     <outlet property="tableViewLabel" destination="Pnx-C9-9sr" id="1F5-Ba-bfD"/>
+                                    <segue destination="T06-Ej-cEP" kind="presentation" id="R50-at-iEk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -248,7 +253,7 @@
                             <outlet property="delegate" destination="TNS-8s-kk7" id="ApV-Hc-deB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="G1v-NY-oBf">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="G1v-NY-oBf">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Iav-tp-daE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8AS-ZO-sWd">
                             <connections>
@@ -287,9 +292,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LES-dH-1uC">
-                        <barButtonItem key="leftBarButtonItem" title="Sent Memes" id="OWJ-ed-jcj"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="iAg-1g-0D9"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sent Memes" id="OWJ-ed-jcj">
+                            <connections>
+                                <action selector="unwindToPreviousVCFor:towardsViewController:" destination="TRe-kb-aRy" id="bUP-mR-h3A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="iAg-1g-0D9">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="8Zy-DK-FT7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editBtn" destination="iAg-1g-0D9" id="Djr-1s-d5N"/>
+                        <outlet property="sentMemeView" destination="9Nc-BY-uCI" id="F4S-AP-UDt"/>
+                        <outlet property="sentMemesBtn" destination="OWJ-ed-jcj" id="Pj2-SI-XEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6d-j8-IOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +375,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9ln-ch-Pcg"/>
+        <segue reference="B0v-rl-1ey"/>
+        <segue reference="8Zy-DK-FT7"/>
     </inferredMetricsTieBreakers>
 </document>
