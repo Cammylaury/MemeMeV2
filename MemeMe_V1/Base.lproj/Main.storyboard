@@ -294,11 +294,12 @@
                     <navigationItem key="navigationItem" id="LES-dH-1uC">
                         <barButtonItem key="leftBarButtonItem" title="Sent Memes" id="OWJ-ed-jcj">
                             <connections>
-                                <action selector="unwindToPreviousVCFor:towardsViewController:" destination="TRe-kb-aRy" id="bUP-mR-h3A"/>
+                                <action selector="unwindVCFor:towardsViewController:" destination="TRe-kb-aRy" id="GOR-1I-fq2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="iAg-1g-0D9">
                             <connections>
+                                <action selector="launchMemeEditorViewController:" destination="TRe-kb-aRy" id="1GF-Lo-Iyc"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="8Zy-DK-FT7"/>
                             </connections>
                         </barButtonItem>

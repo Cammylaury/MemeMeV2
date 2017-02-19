@@ -10,17 +10,17 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    var meme = MemeImage?.self
+    var meme: UIImage = SentMemeImageView?
     
     @IBOutlet weak var sentMemesBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
     @IBOutlet weak var sentMemeView: UIImageView!
     
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        displayMeme(meme)
         
     }
 
@@ -29,9 +29,9 @@ class MemeDetailViewController: UIViewController {
 
     }
     
-    func displayMeme(_ meme: MemeImage) {
+    func displayMeme(_ meme: SentMemeImageView) {
         
-        sentMemeView.image = MemeImage
+        SentMemeImageView.meme = meme
         
     }
     

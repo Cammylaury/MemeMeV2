@@ -11,7 +11,7 @@ import UIKit
 class SentMemesTableViewController: UITableViewController {
     
     var _tableView: UITableView!
-    
+    var memeData: [MemeImage] = []
     
     
     //calling memes from array in Delegate
@@ -29,8 +29,19 @@ class SentMemesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.isScrollEnabled = true
-   
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (tableView.indexPathForSelectedRow! as? IndexPath) != nil {
+            _ = segue.destination as! MemeDetailViewController
+            
+        }
+    
+}
+    
+    
+    
 
     // MARK: - Table view data source
 
@@ -69,6 +80,7 @@ class SentMemesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return false
+    
     }
 
     func deleteMemesInTableViewCell(_ index: Int) {

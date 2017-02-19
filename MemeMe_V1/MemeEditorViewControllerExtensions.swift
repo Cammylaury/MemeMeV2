@@ -9,13 +9,17 @@
 import UIKit
 
 extension UIViewController {
+    
+    
 
     func launchMemeViewer(_ meme: MemeImage) {
+        
+        let memeImage = UIImage(named: SentMemeImageView)
+        
         // Grab MemeDetailVC from Storyboard.
         let memeDetailViewController = storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
-        memeDetailViewController.UIImage = [meme]
-        
+        memeDetailViewController.sentMemeView = memeImage
         // Present the view controller using navigation.
         navigationController!.pushViewController(memeDetailViewController, animated: true)
     }

@@ -345,11 +345,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe_V1/SentMemesTableViewController.swift"
-            timestampString = "508791452.167424"
+            timestampString = "509206028.204154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "deleteMemesInTableViewCell(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -383,6 +383,132 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "launchMemeEditorViewController(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/MemeDetailViewController.swift"
+            timestampString = "509049986.558397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MemeDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemeMe_V1.MemeDetailViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MemeMe_V1.MemeDetailViewController"
+                  moduleName = "MemeMe_V1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CameronL/Documents/MemeMe_V1/MemeMe_V1/MemeDetailViewController.swift"
+                  timestampString = "509049990.952753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemeMe_V1.MemeDetailViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MemeMe_V1.MemeDetailViewController"
+                  moduleName = "MemeMe_V1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CameronL/Documents/MemeMe_V1/MemeMe_V1/MemeDetailViewController.swift"
+                  timestampString = "509049990.95851"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemeMe_V1.MemeDetailViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MemeMe_V1.MemeDetailViewController&gt;"
+                  moduleName = "MemeMe_V1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CameronL/Documents/MemeMe_V1/MemeMe_V1/MemeDetailViewController.swift"
+                  timestampString = "509049990.962607"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemeMe_V1.MemeDetailViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MemeMe_V1.MemeDetailViewController&gt;"
+                  moduleName = "MemeMe_V1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/CameronL/Documents/MemeMe_V1/MemeMe_V1/MemeDetailViewController.swift"
+                  timestampString = "509049990.968857"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/SentMemesTableViewController.swift"
+            timestampString = "509206028.204154"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/memeEditorViewControllerExtensions.swift"
+            timestampString = "509205490.76581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "launchMemeViewer(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMe_V1/MemeDetailViewController.swift"
+            timestampString = "509208219.420216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "displayMeme(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

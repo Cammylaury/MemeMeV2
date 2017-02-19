@@ -15,3 +15,8 @@ struct MemeImage {
     let originalImage: UIImage
     let memedImage: UIImage
 }
+
+
+struct SentMemeImageView {
+    var memedImageDetailVC: UIImage
+}
