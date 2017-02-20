@@ -33,16 +33,16 @@ class SentMemesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (tableView.indexPathForSelectedRow! as? IndexPath) != nil {
-            _ = segue.destination as! MemeDetailViewController
-            
+        if segue.identifier == "MemeDetailViewController" ,
+        let nextScene = segue.destination as? MemeDetailViewController ,
+            let indexPath = self.tableView.indexPathForSelectedRow {
+            let selectedMeme = memes[indexPath.row].memedImage as! UIImageView
+            nextScene.sentMemeView = selectedMeme
         }
+        
+    }
     
-}
     
-    
-    
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
