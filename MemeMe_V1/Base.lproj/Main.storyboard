@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +46,10 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="memeCellImageView" destination="jeQ-qm-V3L" id="ejp-Dt-AOw"/>
-                                    <segue destination="T06-Ej-cEP" kind="show" identifier="MemeDetailViewController" id="B0v-rl-1ey"/>
+                                    <segue destination="T06-Ej-cEP" kind="show" identifier="MemeDetailViewController" id="B0v-rl-1ey">
+                                        <segue key="commit" inheritsFrom="parent" id="iTd-bF-8kP"/>
+                                        <segue key="preview" inheritsFrom="commit" id="LgF-Gf-Uzz"/>
+                                    </segue>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -57,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="7dK-8L-vaS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="azG-5D-cN6">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="9ln-ch-Pcg"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="MemeEditorViewController" id="9qp-SO-IWq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -72,7 +76,7 @@
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="memeEditorViewController" customModule="MemeMe_V1" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_V1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -89,11 +93,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fIF-MP-WT9"/>
-                                    <barButtonItem title="Photos" id="ZuV-gK-wGf">
-                                        <connections>
-                                            <action selector="getImageFromAlbum:" destination="BYZ-38-t0r" id="aSd-ko-p5e"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Photos" id="ZuV-gK-wGf"/>
                                     <barButtonItem systemItem="camera" id="jfY-m4-uGK">
                                         <connections>
                                             <action selector="getImageFromCamera:" destination="BYZ-38-t0r" id="2DP-TD-4tv"/>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718" y="125"/>
+            <point key="canvasLocation" x="2718" y="-144"/>
         </scene>
         <!--SentMemesTabBarController-->
         <scene sceneID="uKP-Oc-1uU">
@@ -245,7 +245,10 @@
                                 <connections>
                                     <outlet property="tableViewImage" destination="3yk-P3-Ipd" id="bHZ-Eb-t8I"/>
                                     <outlet property="tableViewLabel" destination="Pnx-C9-9sr" id="1F5-Ba-bfD"/>
-                                    <segue destination="T06-Ej-cEP" kind="presentation" id="R50-at-iEk"/>
+                                    <segue destination="T06-Ej-cEP" kind="presentation" identifier="MemeDetailViewController" id="R50-at-iEk">
+                                        <segue key="commit" inheritsFrom="parent" id="PHo-hc-VT5"/>
+                                        <segue key="preview" inheritsFrom="commit" id="h6k-Rr-Fbk"/>
+                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -258,14 +261,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Iav-tp-daE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8AS-ZO-sWd">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="push" identifier="MemeDetailViewController" id="xt2-Mq-NkM"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="MemeEditorViewController" id="jKM-ps-Ch5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8be-cD-dcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="-157"/>
+            <point key="canvasLocation" x="1866" y="-187"/>
         </scene>
         <!--MemeDetailViewController-->
         <scene sceneID="cLI-yv-SDr">
@@ -280,7 +283,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-BY-uCI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,7 +304,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="iAg-1g-0D9">
                             <connections>
                                 <action selector="launchMemeEditorViewController:" destination="TRe-kb-aRy" id="1GF-Lo-Iyc"/>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="8Zy-DK-FT7"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="MemeDetailViewController" id="8Zy-DK-FT7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -377,7 +380,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B0v-rl-1ey"/>
-        <segue reference="xt2-Mq-NkM"/>
+        <segue reference="R50-at-iEk"/>
+        <segue reference="8Zy-DK-FT7"/>
     </inferredMetricsTieBreakers>
 </document>

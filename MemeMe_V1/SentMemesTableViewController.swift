@@ -14,10 +14,12 @@ class SentMemesTableViewController: UITableViewController {
     var memeData: [Meme] = []
     
     
+    
     //calling memes from array in Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes: [Meme] {
         return appDelegate.memes
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,10 +36,18 @@ class SentMemesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemeDetailViewController" ,
-        let nextScene = segue.destination as? MemeDetailViewController ,
+            let nextScene = segue.destination as? MemeDetailViewController ,
             let indexPath = tableView.indexPathForSelectedRow {
-            let selectedMeme = memes[indexPath.row].memedImage
-            nextScene.sentMemeView.image = Meme.memedImage
+            let selectedMeme = memeData[indexPath.row]
+            let sentMemeImage = SentMemeImage(memedImage: selectedMeme.memedImage)
+            nextScene.meme = sentMemeImage
+        } else {
+            if segue.identifier == "MemeEditorViewController" {
+            _ = segue.destination as? MemeEditorViewController
+                performSegue(withIdentifier: "MemeEditorViewController", sender: Any?.self)
+        }
+        
+        
         }
         
     }

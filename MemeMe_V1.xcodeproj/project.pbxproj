@@ -22,7 +22,6 @@
 		2638AB971E30B5B00072CB20 /* MemeMe_V1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638AB961E30B5B00072CB20 /* MemeMe_V1UITests.swift */; };
 		2638ABAA1E3302190072CB20 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABA91E3302190072CB20 /* Meme.swift */; };
 		2638ABAC1E33B4BD0072CB20 /* TextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2638ABAB1E33B4BD0072CB20 /* TextDelegate.swift */; };
-		26799B361E50D45A00BC8317 /* memeEditorViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26799B351E50D45A00BC8317 /* memeEditorViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		2638AB981E30B5B00072CB20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2638ABA91E3302190072CB20 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		2638ABAB1E33B4BD0072CB20 /* TextDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDelegate.swift; sourceTree = "<group>"; };
-		26799B351E50D45A00BC8317 /* memeEditorViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memeEditorViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +149,6 @@
 				26223A801E4B798800D1DA68 /* SentMemesCollectionViewController.swift */,
 				26223A841E4B805800D1DA68 /* MemeDetailViewController.swift */,
 				2638AB751E30B5B00072CB20 /* MemeEditorViewController.swift */,
-				26799B351E50D45A00BC8317 /* memeEditorViewControllerExtensions.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,7 +317,6 @@
 				26223A831E4B7B0700D1DA68 /* MemeCollectionViewCell.swift in Sources */,
 				2638ABAA1E3302190072CB20 /* Meme.swift in Sources */,
 				2638AB741E30B5B00072CB20 /* AppDelegate.swift in Sources */,
-				26799B361E50D45A00BC8317 /* memeEditorViewControllerExtensions.swift in Sources */,
 				26223A811E4B798800D1DA68 /* SentMemesCollectionViewController.swift in Sources */,
 				2638AB7C1E30B5B00072CB20 /* MemeMe_V1.xcdatamodeld in Sources */,
 				26223A851E4B805800D1DA68 /* MemeDetailViewController.swift in Sources */,

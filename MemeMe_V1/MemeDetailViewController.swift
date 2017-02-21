@@ -10,27 +10,17 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    var meme = SentMemeImageView?.self
+    var meme: SentMemeImage?
     
     @IBOutlet weak var sentMemesBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
     @IBOutlet weak var sentMemeView: UIImageView!
+ 
     
     
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-    func displayMeme(_ meme: SentMemeImageView) {
-        
+    func displayMeme() {
+        self.sentMemeView.image = self.meme?.memedImage
         
     }
     
@@ -44,5 +34,4 @@ class MemeDetailViewController: UIViewController {
     @IBAction func unwindVC(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         self.dismiss(animated: true, completion: nil)
     }
-
 }

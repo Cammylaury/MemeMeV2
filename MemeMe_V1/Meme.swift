@@ -17,6 +17,6 @@ struct Meme {
 }
 
 
-struct SentMemeImageView {
-    var memedImageDetailVC: UIImageView
+struct SentMemeImage {
+    var memedImage: UIImage
 }
