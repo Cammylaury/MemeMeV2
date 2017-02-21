@@ -45,7 +45,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="memeCellImageView" destination="jeQ-qm-V3L" id="ejp-Dt-AOw"/>
-                                    <segue destination="T06-Ej-cEP" kind="presentation" id="B0v-rl-1ey"/>
+                                    <segue destination="T06-Ej-cEP" kind="show" identifier="MemeDetailViewController" id="B0v-rl-1ey"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -164,6 +164,7 @@
                             <constraint firstItem="KOg-0m-YRr" firstAttribute="bottom" secondItem="v0S-Xm-z2t" secondAttribute="top" id="zQJ-gh-nIf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eYO-QF-Qep"/>
                     <connections>
                         <outlet property="albumBtn" destination="ZuV-gK-wGf" id="IFS-UB-jGi"/>
                         <outlet property="bottomBar" destination="v0S-Xm-z2t" id="a0L-4b-Z86"/>
@@ -257,7 +258,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Iav-tp-daE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8AS-ZO-sWd">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="xt2-Mq-NkM"/>
+                                <segue destination="BYZ-38-t0r" kind="push" identifier="MemeDetailViewController" id="xt2-Mq-NkM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -266,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="-157"/>
         </scene>
-        <!--Meme Detail View-->
+        <!--MemeDetailViewController-->
         <scene sceneID="cLI-yv-SDr">
             <objects>
-                <viewController title="Meme Detail View" id="TRe-kb-aRy" customClass="MemeDetailViewController" customModule="MemeMe_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" title="MemeDetailViewController" id="TRe-kb-aRy" userLabel="MemeDetailViewController" customClass="MemeDetailViewController" customModule="MemeMe_V1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z9a-dp-2JX"/>
                         <viewControllerLayoutGuide type="bottom" id="vAH-gC-Z0Q"/>
@@ -377,6 +378,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="B0v-rl-1ey"/>
-        <segue reference="8Zy-DK-FT7"/>
+        <segue reference="xt2-Mq-NkM"/>
     </inferredMetricsTieBreakers>
 </document>

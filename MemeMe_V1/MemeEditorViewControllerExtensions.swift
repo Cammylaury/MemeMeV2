@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     
 
-    func launchMemeViewer(_ meme: MemeImage) {
+    func launchMemeViewer(_ meme: Meme) {
         
         
         
@@ -19,7 +19,7 @@ extension UIViewController {
         let memeDetailViewController = storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // Present the view controller using navigation.
-        navigationController!.pushViewController(memeDetailViewController, animated: true)
+        navigationController!.pushViewController(MemeDetailViewController, animated: true)
     }
     
 }

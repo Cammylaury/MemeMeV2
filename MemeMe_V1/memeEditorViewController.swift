@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  MemeEditorViewContoller.swift
 //  MemeMe_V1
 //
 //  Created by Cameron Laury on 1/19/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class memeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     // MainVC!
 
@@ -51,7 +51,7 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     
     // Use of undeclared type 'MemeImage'
-    var meme: MemeImage!
+    var meme: Meme!
     
 
 
@@ -90,7 +90,7 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         
         if bottomTextField.isFirstResponder {
-            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     
     }
@@ -145,7 +145,7 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
         pickerController.delegate = self
         pickerController.sourceType = sourceType
         
-        self.present(pickerController, animated: true, completion: nil)
+        present(pickerController, animated: true, completion: nil)
         
     }
     
@@ -218,7 +218,7 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
         
     }
     func save(_ memedImage: UIImage) {
-            let meme = MemeImage.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+            let meme = Meme.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
         
         // Adding to the array of memes!
         
@@ -227,23 +227,4 @@ class memeEditorViewController: UIViewController, UINavigationControllerDelegate
         appDelegate.memes.append(meme)
 
         }
-
-    }
-
-        
-    
-        
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+}

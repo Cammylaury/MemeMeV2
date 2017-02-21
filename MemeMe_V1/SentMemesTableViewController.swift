@@ -11,12 +11,12 @@ import UIKit
 class SentMemesTableViewController: UITableViewController {
     
     var _tableView: UITableView!
-    var memeData: [MemeImage] = []
+    var memeData: [Meme] = []
     
     
     //calling memes from array in Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var memes: [MemeImage] {
+    var memes: [Meme] {
         return appDelegate.memes
     }
     
@@ -35,9 +35,9 @@ class SentMemesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemeDetailViewController" ,
         let nextScene = segue.destination as? MemeDetailViewController ,
-            let indexPath = self.tableView.indexPathForSelectedRow {
-            let selectedMeme = memes[indexPath.row].memedImage as! UIImageView
-            nextScene.sentMemeView = selectedMeme
+            let indexPath = tableView.indexPathForSelectedRow {
+            let selectedMeme = memes[indexPath.row].memedImage
+            nextScene.sentMemeView.image = Meme.memedImage
         }
         
     }
@@ -46,9 +46,9 @@ class SentMemesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if self.isBeingPresented {
-            performSegue(withIdentifier: "MemeDetailViewController", sender: Any?.self)
-        }
+       
+            //navigationController!.pushViewController(MemeDetailViewController, animated: true)
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

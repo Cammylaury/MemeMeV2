@@ -17,7 +17,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     //calling memes from array in Delegate
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var memes: [MemeImage] {
+    var memes: [Meme] {
         return appDelegate.memes
     }
     

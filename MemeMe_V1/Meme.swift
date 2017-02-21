@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct MemeImage {
+struct Meme {
     let topText: String
     let bottomText: String
     let originalImage: UIImage
@@ -18,5 +18,5 @@ struct MemeImage {
 
 
 struct SentMemeImageView {
-    var memedImageDetailVC: UIImage
+    var memedImageDetailVC: UIImageView
 }
