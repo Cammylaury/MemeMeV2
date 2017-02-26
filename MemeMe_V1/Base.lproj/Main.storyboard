@@ -71,7 +71,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oe3-ad-Hjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="548"/>
+            <point key="canvasLocation" x="1831" y="665"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -93,7 +93,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fIF-MP-WT9"/>
-                                    <barButtonItem title="Photos" id="ZuV-gK-wGf"/>
+                                    <barButtonItem title="Photos" id="ZuV-gK-wGf">
+                                        <connections>
+                                            <action selector="getImageFromAlbum:" destination="BYZ-38-t0r" id="r1U-S0-9Vt"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="camera" id="jfY-m4-uGK">
                                         <connections>
                                             <action selector="getImageFromCamera:" destination="BYZ-38-t0r" id="2DP-TD-4tv"/>
@@ -166,7 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eYO-QF-Qep"/>
                     <connections>
-                        <outlet property="albumBtn" destination="ZuV-gK-wGf" id="IFS-UB-jGi"/>
+                        <outlet property="albumBtn" destination="ZuV-gK-wGf" id="ext-cL-AiI"/>
                         <outlet property="bottomBar" destination="v0S-Xm-z2t" id="a0L-4b-Z86"/>
                         <outlet property="bottomTextField" destination="HoD-2P-MTa" id="ybY-S7-Yme"/>
                         <outlet property="cameraBtn" destination="jfY-m4-uGK" id="3LX-3O-iMI"/>
@@ -179,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718" y="-144"/>
+            <point key="canvasLocation" x="2996" y="-158"/>
         </scene>
         <!--SentMemesTabBarController-->
         <scene sceneID="uKP-Oc-1uU">
@@ -283,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-BY-uCI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6d-j8-IOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431" y="804"/>
+            <point key="canvasLocation" x="3705" y="789"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ScS-g6-LBH">
@@ -380,7 +384,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R50-at-iEk"/>
-        <segue reference="8Zy-DK-FT7"/>
+        <segue reference="B0v-rl-1ey"/>
+        <segue reference="9qp-SO-IWq"/>
     </inferredMetricsTieBreakers>
 </document>

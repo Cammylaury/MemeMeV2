@@ -28,24 +28,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         collectionView?.reloadData()
         
         flowLayoutSettings()
-
-    }
-    // Here is where I can't figure out how to fix it!
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MemeDetailViewController" {
-                let nextScene: MemeDetailViewController = segue.destination as! MemeDetailViewController
-                let cell = sender as! MemeCollectionViewCell
-                let indexPath = self.collectionView!.indexPath(for: cell)
-                let memeDetail = self.memes[(indexPath?.row)!]
-                nextScene.sentMemeView = memeDetail as? UIImageView
-                performSegue(withIdentifier: "MemeDetailViewController", sender: Any?.self)
-        } else {
-            if segue.identifier == "MemeEditorViewController" {
-                _ = segue.destination as? MemeEditorViewController
-                performSegue(withIdentifier: "MemeEditorViewController", sender: Any?.self)
-        }
-        }
-        
+    
     }
     func flowLayoutSettings() {
         
@@ -72,7 +55,16 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        self.performSegue(withIdentifier: "MemeDetailViewController", sender: self.self)
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MemeDetailViewController" ,
+        let nextScene = segue.destination as? MemeDetailViewController ,
+            let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: IndexPath) {
+            let selectedMeme = memes[IndexPath]
+            
+        }
+    }
+
 }

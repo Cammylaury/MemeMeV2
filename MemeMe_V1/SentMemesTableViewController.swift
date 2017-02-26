@@ -31,25 +31,22 @@ class SentMemesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.isScrollEnabled = true
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "MemeDetailViewController" ,
-            let nextScene = segue.destination as? MemeDetailViewController ,
+        let nextScene = segue.destination as? MemeDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow {
             let selectedMeme = memeData[indexPath.row]
             let sentMemeImage = SentMemeImage(memedImage: selectedMeme.memedImage)
             nextScene.meme = sentMemeImage
         } else {
             if segue.identifier == "MemeEditorViewController" {
-            _ = segue.destination as? MemeEditorViewController
-                performSegue(withIdentifier: "MemeEditorViewController", sender: Any?.self)
+                _ = segue.destination as? MemeEditorViewController
+            }
         }
-        
-        
-        }
-        
     }
     
     
@@ -105,6 +102,7 @@ class SentMemesTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.left)
             tableView.endUpdates()
         }
+        
     }
 }
 

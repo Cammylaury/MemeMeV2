@@ -15,6 +15,10 @@ class MemeDetailViewController: UIViewController {
     @IBOutlet weak var sentMemesBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
     @IBOutlet weak var sentMemeView: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        displayMeme()
+    }
  
     
     

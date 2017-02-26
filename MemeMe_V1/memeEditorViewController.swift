@@ -45,12 +45,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     // meme attributes
     let memeTextAttributes:[String: Any] = [NSStrokeColorAttributeName: UIColor.black, NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName: NSNumber( value: -4.0 )]
 
-    
     var isKeyboardVisible = false
-
-    
-    
-    // Use of undeclared type 'MemeImage'
     var meme: Meme!
     
 
@@ -157,6 +152,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     @IBAction func getImageFromAlbum(_ sender: Any) {
         
+        
         if albumBtn.isEnabled == true {
         
         }
@@ -166,7 +162,6 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     @IBAction func cancel(_ sender: Any) {
         
-        shareBtn.isEnabled = false
         imageView.image = nil
         topTextField.text = topTextDefault
         bottomTextField.text = bottomTextDefault
@@ -175,8 +170,8 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     @IBAction func share(_ sender: Any) {
         
-        
         let memedImage = generateMemedImage()
+        
         let socialController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         socialController.completionWithItemsHandler = {
             
@@ -218,7 +213,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
     }
     func save(_ memedImage: UIImage) {
-            let meme = Meme.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+        let meme = Meme.init(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
         
         // Adding to the array of memes!
         
