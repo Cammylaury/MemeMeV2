@@ -17,10 +17,14 @@ class MemeDetailViewController: UIViewController {
     @IBOutlet weak var sentMemeView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
-        displayMeme()
+        super.viewWillAppear(true)
+        
     }
  
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        displayMeme()
+    }
     
     
     func displayMeme() {

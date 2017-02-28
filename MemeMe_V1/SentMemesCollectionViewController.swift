@@ -60,9 +60,10 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemeDetailViewController" ,
-        let nextScene = segue.destination as? MemeDetailViewController ,
-            let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: IndexPath) {
-            let selectedMeme = memes[IndexPath]
+            let nextScene = segue.destination as? MemeDetailViewController ,
+            let indexPath = collectionView?.indexPathsForSelectedItems?.first {
+            let selectedMeme = memes[indexPath.row]
+            nextScene.meme = SentMemeImage(memedImage: selectedMeme.memedImage)
             
         }
     }

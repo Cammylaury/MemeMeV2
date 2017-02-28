@@ -42,10 +42,6 @@ class SentMemesTableViewController: UITableViewController {
             let selectedMeme = memeData[indexPath.row]
             let sentMemeImage = SentMemeImage(memedImage: selectedMeme.memedImage)
             nextScene.meme = sentMemeImage
-        } else {
-            if segue.identifier == "MemeEditorViewController" {
-                _ = segue.destination as? MemeEditorViewController
-            }
         }
     }
     
