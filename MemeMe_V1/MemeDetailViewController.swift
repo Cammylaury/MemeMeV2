@@ -10,7 +10,7 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    var meme: SentMemeImage?
+    var meme: Meme!
     
     @IBOutlet weak var sentMemesBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -23,14 +23,10 @@ class MemeDetailViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayMeme()
-    }
-    
-    
-    func displayMeme() {
-        self.sentMemeView.image = self.meme?.memedImage
         
+        sentMemeView.image = meme.memedImage
     }
+    
     
     @IBAction func launchMemeEditorViewController(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)

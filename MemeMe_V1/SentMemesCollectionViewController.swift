@@ -55,17 +55,11 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let controller = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        controller.meme = self.memes[indexPath.item]
+        self.navigationController!.pushViewController(controller, animated: true)
 
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MemeDetailViewController" ,
-            let nextScene = segue.destination as? MemeDetailViewController ,
-            let indexPath = collectionView?.indexPathsForSelectedItems?.first {
-            let selectedMeme = memes[indexPath.row]
-            nextScene.meme = SentMemeImage(memedImage: selectedMeme.memedImage)
-            
-        }
     }
 
 }

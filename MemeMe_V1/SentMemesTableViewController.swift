@@ -34,32 +34,18 @@ class SentMemesTableViewController: UITableViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "MemeDetailViewController" ,
-        let nextScene = segue.destination as? MemeDetailViewController,
-            let indexPath = tableView.indexPathForSelectedRow {
-            let selectedMeme = memeData[indexPath.row]
-            let sentMemeImage = SentMemeImage(memedImage: selectedMeme.memedImage)
-            nextScene.meme = sentMemeImage
-        }
-    }
-    
-    
-    // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-            //navigationController!.pushViewController(MemeDetailViewController, animated: true)
+        let sentMemeView = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
+        sentMemeView.meme = self.memes[indexPath.row]
+        
+        self.navigationController?.pushViewController(sentMemeView, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // returning the number of rows
         return memes.count
     }
-
-    // Here it is! -----
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "sentMemesTableView") as! MemeTableViewCell
@@ -77,13 +63,6 @@ class SentMemesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return false
-    
     }
 
     func deleteMemesInTableViewCell(_ index: Int) {

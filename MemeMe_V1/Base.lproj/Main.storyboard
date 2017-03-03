@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,10 +45,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="memeCellImageView" destination="jeQ-qm-V3L" id="ejp-Dt-AOw"/>
-                                    <segue destination="T06-Ej-cEP" kind="show" identifier="MemeDetailViewController" id="B0v-rl-1ey">
-                                        <segue key="commit" inheritsFrom="parent" id="iTd-bF-8kP"/>
-                                        <segue key="preview" inheritsFrom="commit" id="LgF-Gf-Uzz"/>
-                                    </segue>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -216,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyC-6x-oIM" id="0r3-9e-it7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-P3-Ipd">
@@ -249,10 +244,6 @@
                                 <connections>
                                     <outlet property="tableViewImage" destination="3yk-P3-Ipd" id="bHZ-Eb-t8I"/>
                                     <outlet property="tableViewLabel" destination="Pnx-C9-9sr" id="1F5-Ba-bfD"/>
-                                    <segue destination="T06-Ej-cEP" kind="presentation" identifier="MemeDetailViewController" id="R50-at-iEk">
-                                        <segue key="commit" inheritsFrom="parent" id="PHo-hc-VT5"/>
-                                        <segue key="preview" inheritsFrom="commit" id="h6k-Rr-Fbk"/>
-                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -287,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-BY-uCI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -360,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="1009" y="549"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MemeDetailNavigationController-->
         <scene sceneID="VxV-LR-mjk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T06-Ej-cEP" sceneMemberID="viewController">
+                <navigationController title="MemeDetailNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="T06-Ej-cEP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h5z-FA-USA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -384,7 +375,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B0v-rl-1ey"/>
         <segue reference="9qp-SO-IWq"/>
     </inferredMetricsTieBreakers>
 </document>
