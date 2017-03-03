@@ -277,8 +277,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-BY-uCI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-BY-uCI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,11 +291,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LES-dH-1uC">
-                        <barButtonItem key="leftBarButtonItem" title="Sent Memes" id="OWJ-ed-jcj">
-                            <connections>
-                                <action selector="unwindVCFor:towardsViewController:" destination="TRe-kb-aRy" id="GOR-1I-fq2"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="iAg-1g-0D9">
                             <connections>
                                 <action selector="launchMemeEditorViewController:" destination="TRe-kb-aRy" id="1GF-Lo-Iyc"/>
@@ -306,7 +301,6 @@
                     <connections>
                         <outlet property="editBtn" destination="iAg-1g-0D9" id="Djr-1s-d5N"/>
                         <outlet property="sentMemeView" destination="9Nc-BY-uCI" id="F4S-AP-UDt"/>
-                        <outlet property="sentMemesBtn" destination="OWJ-ed-jcj" id="Pj2-SI-XEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6d-j8-IOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -375,6 +369,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9qp-SO-IWq"/>
+        <segue reference="8Zy-DK-FT7"/>
     </inferredMetricsTieBreakers>
 </document>

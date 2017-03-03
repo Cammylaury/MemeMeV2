@@ -32,10 +32,4 @@ class MemeDetailViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     
     }
-    
-    //unwinding to the view before (the collectionView, or the tableView)
-    
-    @IBAction func unwindVC(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
